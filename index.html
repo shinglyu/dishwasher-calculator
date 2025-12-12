@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculate dishwasher delay time to finish at your desired end time">
+    <meta name="theme-color" content="#2196F3">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icon-192.svg">
+    <title>Dishwasher Delay Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🍽️ Dishwasher Delay Calculator</h1>
+        
+        <section class="input-section">
+            <h2>Target End Time</h2>
+            <div class="button-group">
+                <button class="option-btn active" data-time="07:00">7:00 AM</button>
+                <button class="option-btn" data-time="12:00">12:00 PM</button>
+                <button class="option-btn" data-time="17:00">5:00 PM</button>
+                <button class="option-btn" data-time="custom">Custom</button>
+            </div>
+            <div class="custom-time-container hidden" id="customTimeContainer">
+                <label for="customTime">Select time:</label>
+                <input type="time" id="customTime" value="07:00">
+            </div>
+        </section>
+
+        <section class="input-section">
+            <h2>Run Time</h2>
+            <div class="button-group">
+                <button class="option-btn runtime-btn active" data-minutes="200">3:20</button>
+                <button class="option-btn runtime-btn" data-minutes="230">3:50</button>
+                <button class="option-btn runtime-btn" data-minutes="140">2:20</button>
+            </div>
+        </section>
+
+        <section class="result-section">
+            <h2>Delay Setting</h2>
+            <div class="result-display">
+                <span class="delay-value" id="delayValue">--</span>
+                <span class="delay-unit">hours</span>
+            </div>
+            <p class="result-info" id="resultInfo"></p>
+        </section>
+
+        <section class="details-section">
+            <button class="toggle-details" id="toggleDetails">
+                <span>Show detailed calculation</span>
+                <span class="arrow">▼</span>
+            </button>
+            <div class="details-content hidden" id="detailsContent">
+                <div class="detail-row">
+                    <span>Current time:</span>
+                    <span id="detailCurrentTime">--</span>
+                </div>
+                <div class="detail-row">
+                    <span>Target end time:</span>
+                    <span id="detailTargetTime">--</span>
+                </div>
+                <div class="detail-row">
+                    <span>Run time:</span>
+                    <span id="detailRunTime">--</span>
+                </div>
+                <div class="detail-row">
+                    <span>Time until target:</span>
+                    <span id="detailTimeUntil">--</span>
+                </div>
+                <div class="detail-row">
+                    <span>Required delay (exact):</span>
+                    <span id="detailExactDelay">--</span>
+                </div>
+                <div class="detail-row">
+                    <span>Delay (rounded down):</span>
+                    <span id="detailRoundedDelay">--</span>
+                </div>
+                <div class="detail-row highlight">
+                    <span>Estimated finish time:</span>
+                    <span id="detailFinishTime">--</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

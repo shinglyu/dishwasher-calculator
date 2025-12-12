@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 480px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    padding: 30px 25px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #555;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.input-section {
+    margin-bottom: 25px;
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.option-btn {
+    flex: 1;
+    min-width: calc(50% - 5px);
+    padding: 14px 16px;
+    border: 2px solid #e0e0e0;
+    background: white;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.option-btn:hover {
+    border-color: #667eea;
+    color: #667eea;
+}
+
+.option-btn.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-color: transparent;
+    color: white;
+}
+
+.custom-time-container {
+    margin-top: 15px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.custom-time-container label {
+    color: #555;
+    font-weight: 500;
+}
+
+.custom-time-container input[type="time"] {
+    flex: 1;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.custom-time-container input[type="time"]:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.result-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 16px;
+    padding: 25px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.result-section h2 {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 15px;
+}
+
+.result-display {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 10px;
+}
+
+.delay-value {
+    font-size: 4rem;
+    font-weight: 700;
+    color: white;
+    line-height: 1;
+}
+
+.delay-unit {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+}
+
+.result-info {
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: 15px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.details-section {
+    border-top: 1px solid #e0e0e0;
+    padding-top: 20px;
+}
+
+.toggle-details {
+    width: 100%;
+    padding: 15px;
+    background: #f8f9fa;
+    border: none;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    color: #555;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.2s ease;
+}
+
+.toggle-details:hover {
+    background: #e9ecef;
+}
+
+.toggle-details .arrow {
+    transition: transform 0.3s ease;
+}
+
+.toggle-details.expanded .arrow {
+    transform: rotate(180deg);
+}
+
+.details-content {
+    margin-top: 15px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 12px;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 0.95rem;
+}
+
+.detail-row:last-child {
+    border-bottom: none;
+}
+
+.detail-row span:first-child {
+    color: #666;
+}
+
+.detail-row span:last-child {
+    color: #333;
+    font-weight: 500;
+}
+
+.detail-row.highlight {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    margin: 10px -20px -20px -20px;
+    padding: 15px 20px;
+    border-radius: 0 0 12px 12px;
+    border-bottom: none;
+}
+
+.detail-row.highlight span {
+    color: white;
+}
+
+.detail-row.highlight span:last-child {
+    font-weight: 600;
+}
+
+@media (max-width: 400px) {
+    .container {
+        padding: 20px 15px;
+    }
+    
+    .option-btn {
+        min-width: calc(50% - 5px);
+        padding: 12px 10px;
+        font-size: 0.9rem;
+    }
+    
+    .delay-value {
+        font-size: 3.5rem;
+    }
+    
+    h1 {
+        font-size: 1.4rem;
+    }
+}
