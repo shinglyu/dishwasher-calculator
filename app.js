@@ -6,8 +6,8 @@ const TARGET_TIME_OPTIONS = [
 ];
 
 const RUN_TIME_OPTIONS = [
-    { label: '3:20', minutes: 200 },
     { label: '3:50', minutes: 230 },
+    { label: '3:22', minutes: 202 },
     { label: '2:20', minutes: 140 }
 ];
 
